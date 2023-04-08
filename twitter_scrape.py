@@ -12,7 +12,7 @@ def scraped_data(keyword, limit, start_date, end_date):
 
     # Using TwitterSearchScraper to scrape data and append tweets to list
     for i, tweet in enumerate(sntwitter.TwitterSearchScraper(
-            f'{keyword} since:{start_date}                                                                                     until:{end_date}').get_items()):
+            f'{keyword} since:{start_date}until:{end_date}').get_items()):
         if i > limit:
             break
         tweets_list.append([tweet.user.username, tweet.user.id, tweet.id, tweet.date, tweet.rawContent,
